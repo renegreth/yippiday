@@ -1,6 +1,6 @@
 # Yippiday – test releases & website
 
-Website: https://renegreth.github.io/MarkdaysReleases/ (GitHub Pages from this repo).
+Website: https://renegreth.github.io/yippiday/ (GitHub Pages from this repo).
 
 
 Seneste testversion af Android-appen **Yippiday** (tidligere Mærkedage) (fødselsdage og mærkedage som widgets på hjemmeskærmen).
@@ -8,7 +8,9 @@ Seneste testversion af Android-appen **Yippiday** (tidligere Mærkedage) (fødse
 **Version:** 0.34.1 (build 45, 2026-11-12T17:26:57Z)
 
 ## ⬇️ Hent
-**[Markdays-latest.apk](https://github.com/renegreth/MarkdaysReleases/raw/main/Markdays-latest.apk)**
+**[Yippiday-latest.apk](https://github.com/renegreth/yippiday/raw/main/Yippiday-latest.apk)**
+
+(Det gamle link `Markdays-latest.apk` virker stadig og peger på samme fil.)
 
 Linket peger altid på den nyeste version.
 
@@ -21,6 +23,6 @@ Linket peger altid på den nyeste version.
 Kræver Android 8.0 eller nyere. Det er en testversion (debug), ikke fra Google Play.
 
 ## Indhold
-- `Markdays-latest.apk` – appen
+- `Yippiday-latest.apk` – appen (også som `Markdays-latest.apk`)
 - `version.json` – versionsnummer, SHA-256 af filen, og hvilken kode den er bygget fra
 - `CHANGELOG.md` – hvad der er nyt
