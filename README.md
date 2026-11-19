@@ -1,6 +1,9 @@
-# Mærkedage – test-udgivelser
+# Yippiday – test releases & website
 
-Seneste testversion af Android-appen **Mærkedage** (fødselsdage og mærkedage som widgets på hjemmeskærmen).
+Website: https://renegreth.github.io/MarkdaysReleases/ (GitHub Pages from this repo).
+
+
+Seneste testversion af Android-appen **Yippiday** (tidligere Mærkedage) (fødselsdage og mærkedage som widgets på hjemmeskærmen).
 
 **Version:** 0.34.1 (build 45, 2026-11-12T17:26:57Z)
 

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yippiday – countdown widgets for the days you love</title>
+<meta name="description" content="Yippiday: countdown widgets for birthdays and the days you love, right on your Android home screen.">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:title" content="Yippiday">
+<meta property="og:description" content="Countdown widgets for birthdays and the days you love.">
+<meta property="og:image" content="og-image.jpg">
+<style>
+  :root {
+    --bg: #fff8fb; --fg: #2a1f26; --muted: #6d5a66; --card: #ffffff; --line: #f0dde7;
+    --brand: #b0185f; --brand2: #ef6c3c; --on-brand: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #17111a; --fg: #f6eaf1; --muted: #c2adb9; --card: #221a26; --line: #3a2d3f;
+      --brand: #ff7ab3; --brand2: #ffad7a; --on-brand: #2a0b1a; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  a { color: var(--brand); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  header { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 22px; text-decoration: none; color: var(--fg); }
+  .logo img { width: 40px; height: 40px; }
+  .hero { text-align: center; padding: 40px 0 28px; }
+  .hero-icon { width: 132px; height: 132px; display: block; margin: 0 auto 18px; filter: drop-shadow(0 10px 24px rgba(214, 90, 90, .35)); }
+  .hero h1 { font-size: clamp(36px, 7vw, 64px); line-height: 1.05; margin: 0 0 14px;
+    background: linear-gradient(120deg, var(--brand), var(--brand2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero p { font-size: clamp(18px, 2.6vw, 22px); color: var(--muted); max-width: 640px; margin: 0 auto 26px; }
+  .cta { display: inline-flex; align-items: center; gap: 10px; padding: 16px 28px; border-radius: 999px;
+    background: linear-gradient(120deg, var(--brand), var(--brand2)); color: var(--on-brand);
+    font-weight: 700; font-size: 19px; text-decoration: none; box-shadow: 0 8px 24px rgba(176,24,95,.25); }
+  .ver { display: block; margin-top: 10px; font-size: 14px; color: var(--muted); }
+  .shot { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line); display: block; }
+  section { padding: 36px 0; }
+  h2 { font-size: 28px; margin: 0 0 16px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px; }
+  .card h3 { margin: 0 0 6px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 16px; }
+  .emoji { font-size: 26px; display: block; margin-bottom: 6px; }
+  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 16px; }
+  figure { margin: 0; }
+  figcaption { color: var(--muted); font-size: 15px; margin-top: 6px; text-align: center; }
+  ol li { margin-bottom: 6px; }
+  footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); font-size: 15px; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="./"><img src="icon.png" alt="">Yippiday</a>
+  </header>
+
+  <div class="hero">
+    <img class="hero-icon" src="icon.png" width="256" height="256" alt="The Yippiday icon">
+    <h1>Yippiday</h1>
+    <p>Countdowns to birthdays and the days you love – as happy widgets on your home screen.</p>
+    <a class="cta" href="Markdays-latest.apk" download>
+      <span>⬇️</span><span>Get it for Android</span>
+    </a>
+    <span class="ver" id="ver"><span>Test version · free · no ads</span></span>
+  </div>
+
+  <img class="shot" src="img/screens.jpg" width="1732" height="900"
+       alt="Yippiday: the list of coming days and the editor">
+
+  <section>
+    <h2><span>What Yippiday does</span></h2>
+    <div class="grid">
+      <div class="card"><span class="emoji">🎂</span><h3>Always the next day</h3>
+        <p>Birthdays with age, anniversaries, holidays and trips. The widget counts down by itself – in hours on the last day.</p></div>
+      <div class="card"><span class="emoji">🎨</span><h3>Your own look</h3>
+        <p>Over 25 templates, three colours, gradients, patterns, fonts, see-through – and save your own styles.</p></div>
+      <div class="card"><span class="emoji">✨</span><h3>A party on the day</h3>
+        <p>Confetti, balloons, snow and animated pictures – and a morning reminder if you like.</p></div>
+      <div class="card"><span class="emoji">🔒</span><h3>Stays on your phone</h3>
+        <p>No account, no ads, no tracking. The app does not use the internet.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span>See it</span></h2>
+    <div class="gallery">
+      <figure><img class="shot" src="img/templates.jpg" width="912" height="615" alt="" loading="lazy">
+        <figcaption><span>Templates</span></figcaption></figure>
+      <figure><img class="shot" src="img/animated.jpg" width="1400" height="1125" alt="" loading="lazy">
+        <figcaption><span>Animated pictures</span></figcaption></figure>
+      <figure><img class="shot" src="img/gradient.jpg" width="1400" height="1011" alt="" loading="lazy">
+        <figcaption><span>Gradients in every template</span></figcaption></figure>
+      <figure><img class="shot" src="img/shape.jpg" width="1400" height="634" alt="" loading="lazy">
+        <figcaption><span>See-through background and corners</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2><span>Install the test version</span></h2>
+    <ol>
+      <li>Tap <b>Get it for Android</b> on your phone.</li>
+      <li>Open the downloaded file. The first time, the phone asks you to allow installing from the browser – allow it.</li>
+      <li>Updating: download and install the new file over the old one. Your days and widgets stay.</li>
+    </ol>
+    <p>Requires Android 8.0 or newer. Coming to Google Play soon.</p>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© Yippiday</span>
+    <span><a href="privacy.html"><span>Privacy policy</span></a>
+      · <a href="CHANGELOG.md"><span>What's new</span></a></span>
+  </div>
+</footer>
+
+<script>
+  // The version comes from version.json next to the APK, written by the publish script.
+  fetch('version.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (v) {
+    if (!v || !v.versionName) return;
+    var d = (v.published || '').slice(0, 10);
+    document.getElementById('ver').textContent = 'Version ' + v.versionName + (d ? ' · ' + d : '') + ' · free · no ads';
+  }).catch(function () {});
+</script>
+</body>
+</html>
