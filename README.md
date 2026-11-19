@@ -8,7 +8,7 @@ Seneste testversion af Android-appen **Yippiday** (tidligere Mærkedage) (fødse
 **Version:** 0.34.1 (build 45, 2026-11-12T17:26:57Z)
 
 ## ⬇️ Hent
-**[Yippiday-latest.apk](https://github.com/renegreth/yippiday/raw/main/Yippiday-latest.apk)**
+**[Yippiday-latest.apk](https://renegreth.github.io/yippiday/Yippiday-latest.apk)**
 
 (Det gamle link `Markdays-latest.apk` virker stadig og peger på samme fil.)
 
