@@ -35,7 +35,12 @@
   .cta { display: inline-flex; align-items: center; gap: 10px; padding: 16px 28px; border-radius: 999px;
     background: linear-gradient(120deg, var(--brand), var(--brand2)); color: var(--on-brand);
     font-weight: 700; font-size: 19px; text-decoration: none; box-shadow: 0 8px 24px rgba(176,24,95,.25); }
-  .cta.soon { cursor: default; }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; max-width: 1000px; margin: 0 auto; text-align: left; }
+  .step { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; }
+  .step .n { display: inline-flex; width: 30px; height: 30px; border-radius: 50%; align-items: center; justify-content: center;
+    background: linear-gradient(120deg, var(--brand), var(--brand2)); color: var(--on-brand); font-weight: 800; }
+  .step p { margin: 0; color: var(--muted); font-size: 15px; }
+  .step .cta { font-size: 16px; padding: 11px 18px; justify-content: center; margin-top: auto; }
   .ver { display: block; margin-top: 10px; font-size: 14px; color: var(--muted); }
   .shot { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line); display: block; }
   section { padding: 36px 0; }
@@ -63,9 +68,25 @@
     <img class="hero-icon" src="icon.png" width="256" height="256" alt="The Yippiday icon">
     <h1>Yippiday</h1>
     <p>Countdowns to birthdays and the days you love – as happy widgets on your home screen.</p>
-    <span class="cta soon"><span>📱</span><span>Coming soon to Google Play</span></span>
-    <span class="ver">Free · no ads · Android 8.0 or newer</span>
+    <span class="ver">Free · no ads · Android 8.0 or newer · now in testing</span>
   </div>
+
+  <section id="test">
+    <h2 style="text-align:center">Try it now – join the test</h2>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><b>Join the tester group</b>
+        <p>Sign in with the Google account you use on your phone and press “Join group”.</p>
+        <a class="cta" href="https://groups.google.com/g/yippiday-testers">Join the group</a></div>
+      <div class="step"><span class="n">2</span><b>Join the test</b>
+        <p>Open the test page with the same account and press “Become a tester”.</p>
+        <a class="cta" href="https://play.google.com/apps/testing/io.github.renegreth.yippiday">Join the test</a></div>
+      <div class="step"><span class="n">3</span><b>Install from Google Play</b>
+        <p>It can take a few minutes after step 2 before the app shows up.</p>
+        <a class="cta" href="https://play.google.com/store/apps/details?id=io.github.renegreth.yippiday">Get it on Google Play</a></div>
+      <div class="step"><span class="n">4</span><b>Add a widget</b>
+        <p>Add your days in the app, then long-press the home screen → Widgets → Yippiday.</p></div>
+    </div>
+  </section>
 
   <img class="shot" src="img/screens.jpg" width="1732" height="900"
        alt="Yippiday: the list of coming days and the editor">
