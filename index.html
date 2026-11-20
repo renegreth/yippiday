@@ -81,6 +81,17 @@
   .shots figure { margin: 0; flex: 0 0 auto; scroll-snap-align: center; }
   .shots img { width: 250px; height: auto; border-radius: 24px; box-shadow: var(--shadow); display: block; }
 
+  /* Moving widgets (animated WebP; a still picture for visitors who ask for less motion) */
+  .party { background: linear-gradient(135deg, #2b1b3d, #3b1f45 55%, #5a2346); color: #fff; padding: 60px 0; position: relative; overflow: hidden; }
+  .party .sub { color: #e8d3e4; }
+  .party::before { content: ""; position: absolute; inset: 0; opacity: .35; pointer-events: none;
+    background-image: radial-gradient(circle, rgba(255,255,255,.9) 1.5px, transparent 2px), radial-gradient(circle, rgba(255,210,120,.9) 2px, transparent 2.5px);
+    background-size: 90px 80px, 150px 130px; background-position: 0 0, 40px 50px; }
+  .loops { position: relative; display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; }
+  .loops img { display: block; width: 150px; height: auto; filter: drop-shadow(0 14px 22px rgba(0,0,0,.35)); }
+  .loops.wide picture { flex: 0 1 420px; }
+  .loops.wide img { width: 100%; }
+  .loops.wide { margin-top: 22px; }
   .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
   .step { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 20px; display: flex; flex-direction: column; gap: 10px; box-shadow: var(--shadow); }
   .step .n { display: inline-flex; width: 34px; height: 34px; border-radius: 50%; align-items: center; justify-content: center;
@@ -154,6 +165,25 @@
   </section>
 </main>
 
+<section class="party" aria-label="Animated widgets">
+  <div class="wrap">
+    <h2 class="display">A party on the day – it moves!</h2>
+    <p class="sub">Animated pictures on your home screen: candles flicker, balloons float, snow falls. They only move while you look, so they do not drain your battery.</p>
+    <div class="loops">
+      <picture><source srcset="img/loops/cake_small_still.webp" media="(prefers-reduced-motion: reduce)"><img src="img/loops/cake_small.webp" width="168" height="189" alt="Birthday cake with flickering candles" loading="lazy"></picture>
+      <picture><source srcset="img/loops/balloon_small_still.webp" media="(prefers-reduced-motion: reduce)"><img src="img/loops/balloon_small.webp" width="168" height="189" alt="Floating balloons" loading="lazy"></picture>
+      <picture><source srcset="img/loops/gift_small_still.webp" media="(prefers-reduced-motion: reduce)"><img src="img/loops/gift_small.webp" width="168" height="189" alt="A gift that opens" loading="lazy"></picture>
+      <picture><source srcset="img/loops/heart_small_still.webp" media="(prefers-reduced-motion: reduce)"><img src="img/loops/heart_small.webp" width="168" height="189" alt="A beating heart" loading="lazy"></picture>
+      <picture><source srcset="img/loops/fireworks_small_still.webp" media="(prefers-reduced-motion: reduce)"><img src="img/loops/fireworks_small.webp" width="168" height="189" alt="Fireworks" loading="lazy"></picture>
+      <picture><source srcset="img/loops/snowfall_small_still.webp" media="(prefers-reduced-motion: reduce)"><img src="img/loops/snowfall_small.webp" width="168" height="189" alt="Snow falling on a Christmas tree" loading="lazy"></picture>
+    </div>
+    <div class="loops wide">
+      <picture><source srcset="img/loops/cake_wide_still.webp" media="(prefers-reduced-motion: reduce)"><img src="img/loops/cake_wide.webp" width="604" height="210" alt="Wide birthday widget with a cake" loading="lazy"></picture>
+      <picture><source srcset="img/loops/gift_wide_still.webp" media="(prefers-reduced-motion: reduce)"><img src="img/loops/gift_wide.webp" width="604" height="210" alt="Wide widget with a gift" loading="lazy"></picture>
+    </div>
+  </div>
+</section>
+
 <section aria-label="Screenshots">
   <h2 class="display">Take a look</h2>
   <p class="sub">Swipe through the app.</p>
@@ -190,7 +220,6 @@
     <p class="sub">Every template works small and wide, with your colours.</p>
     <div class="gallery">
       <figure><img src="img/templates.jpg" width="912" height="615" alt="" loading="lazy"><figcaption>Templates</figcaption></figure>
-      <figure><img src="img/animated.jpg" width="1400" height="1125" alt="" loading="lazy"><figcaption>Animated pictures</figcaption></figure>
       <figure><img src="img/gradient.jpg" width="1400" height="1011" alt="" loading="lazy"><figcaption>Gradients in every template</figcaption></figure>
       <figure><img src="img/shape.jpg" width="1400" height="634" alt="" loading="lazy"><figcaption>See-through background and corners</figcaption></figure>
     </div>
