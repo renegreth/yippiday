@@ -35,6 +35,7 @@
   .cta { display: inline-flex; align-items: center; gap: 10px; padding: 16px 28px; border-radius: 999px;
     background: linear-gradient(120deg, var(--brand), var(--brand2)); color: var(--on-brand);
     font-weight: 700; font-size: 19px; text-decoration: none; box-shadow: 0 8px 24px rgba(176,24,95,.25); }
+  .cta.soon { cursor: default; }
   .ver { display: block; margin-top: 10px; font-size: 14px; color: var(--muted); }
   .shot { width: 100%; height: auto; border-radius: 18px; border: 1px solid var(--line); display: block; }
   section { padding: 36px 0; }
@@ -62,10 +63,8 @@
     <img class="hero-icon" src="icon.png" width="256" height="256" alt="The Yippiday icon">
     <h1>Yippiday</h1>
     <p>Countdowns to birthdays and the days you love – as happy widgets on your home screen.</p>
-    <a class="cta" href="Yippiday-latest.apk" download>
-      <span>⬇️</span><span>Get it for Android</span>
-    </a>
-    <span class="ver" id="ver"><span>Test version · free · no ads</span></span>
+    <span class="cta soon"><span>📱</span><span>Coming soon to Google Play</span></span>
+    <span class="ver">Free · no ads · Android 8.0 or newer</span>
   </div>
 
   <img class="shot" src="img/screens.jpg" width="1732" height="900"
@@ -99,32 +98,14 @@
     </div>
   </section>
 
-  <section>
-    <h2><span>Install the test version</span></h2>
-    <ol>
-      <li>Tap <b>Get it for Android</b> on your phone.</li>
-      <li>Open the downloaded file. The first time, the phone asks you to allow installing from the browser – allow it.</li>
-      <li>Updating: download and install the new file over the old one. Your days and widgets stay.</li>
-    </ol>
-    <p>Requires Android 8.0 or newer. Coming to Google Play soon.</p>
-  </section>
 </div>
 
 <footer>
   <div class="wrap">
     <span>© Yippiday</span>
-    <span><a href="privacy.html"><span>Privacy policy</span></a>
-      · <a href="CHANGELOG.md"><span>What's new</span></a></span>
+    <span><a href="privacy.html"><span>Privacy policy</span></a></span>
   </div>
 </footer>
 
-<script>
-  // The version comes from version.json next to the APK, written by the publish script.
-  fetch('version.json', { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (v) {
-    if (!v || !v.versionName) return;
-    var d = (v.published || '').slice(0, 10);
-    document.getElementById('ver').textContent = 'Version ' + v.versionName + (d ? ' · ' + d : '') + ' · free · no ads';
-  }).catch(function () {});
-</script>
 </body>
 </html>
